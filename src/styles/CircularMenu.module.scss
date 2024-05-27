@@ -1,0 +1,28 @@
+.circleContainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  z-index: 1;
+}
+
+.circleElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  & img {
+    width: 90px;
+    height: 90px;
+  }
+
+  & li {
+    list-style: none;
+  }
+}

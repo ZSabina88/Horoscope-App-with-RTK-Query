@@ -1,0 +1,51 @@
+@import "./variables";
+
+.item {
+    width: 50vw;
+    height: auto;
+    // width: 450px;
+    min-height: 600px;
+    color: black;
+    background-color: $primary-color;
+    background-image: url(../assets/bglight.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: 3px ridge #b8a794;
+    border-radius: 5px;
+    position: relative;
+}
+
+.itemText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 50px 0 50px;
+    overflow: hidden;
+    font-size: 20px;
+
+    & h2{
+        font-size: 32px;
+    }
+
+    & p {
+        margin: 0;
+        text-align: justify;
+    }
+
+    & div {
+        margin: 30px 0;
+    }
+}
+
+.loading{
+    margin: 150px  auto;
+    text-align: center;
+}
+
+.error{
+    margin: 150px auto;
+    text-align: center;
+    color: rgb(175, 3, 3);
+}
