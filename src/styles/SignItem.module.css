@@ -20,9 +20,13 @@
   align-items: center;
   padding: 70px 50px 0 50px;
   overflow: hidden;
-  font-size: 20px;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 24px;
 }
 .itemText h2 {
+  font-family: inherit;
+  font-weight: inherit;
   font-size: 32px;
 }
 .itemText p {

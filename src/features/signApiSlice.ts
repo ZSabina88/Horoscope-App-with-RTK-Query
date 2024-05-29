@@ -18,8 +18,10 @@ export const horoscopeApi = createApi({
     endpoints: (builder) => ({
         getEachSign: builder.query<ISignsDetail, string>({
             query: (name) => `horoscope/${name}/today`
-        })
+        }),
     })
 });
+
+
 
 export const { useGetEachSignQuery } = horoscopeApi;

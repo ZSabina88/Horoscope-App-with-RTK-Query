@@ -1,0 +1,44 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+.cardWrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: $primary-color;
+    border: 3px ridge $border-clr;
+    border-radius: 5px;
+
+}
+
+.cardWrapper::backdrop {
+    background: hsl(0 0% 0% / 30%);
+  }
+
+.buttons {
+    width: 30vw;
+    min-height: 200px;
+    @include flex(row, center);
+
+    & button {
+        width: 70%;
+        height: 50px;
+        border: 1px solid $border-clr;
+        @include font(24px);
+    }
+}
+
+.dailySigns {
+    width: 50vw;
+    min-height: 600px;
+    background-image: url(../assets/bglight.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}

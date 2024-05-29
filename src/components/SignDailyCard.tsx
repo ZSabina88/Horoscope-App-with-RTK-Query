@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useGetEachSignQuery } from "../features/signApiSlice";
 import SignItem from "./SignItem";
-import classes from "../styles/SignCard.module.scss";
-import { GoNorthStar } from "react-icons/go";
+import CardModal from "./CardModal";
 
-type Prop = {
-    onClose: () => void,
+type PropCard = {
+    onClose?: () => void,
+    isOpen?: boolean
 }
 
-const SignCard: React.FC<Prop> = ({ onClose }) => {
+const SignDailyCard: React.FC<PropCard> = ({ onClose, isOpen }) => {
     const params = useParams();
 
 
@@ -25,14 +25,11 @@ const SignCard: React.FC<Prop> = ({ onClose }) => {
 
 
     return (
-        <section className={classes.card}>
-            <SignItem>
-                <p className={classes.icon} onClick={onClose}><GoNorthStar size={28} /></p>
-                {isLoading && <h2 className={classes.loading}>Loading...</h2>}
-                {isError && <h2 className={classes.error}>Something went wrong!</h2>}
+        <CardModal dailysignCard isOpen={isOpen} onClose={onClose}>
+            <SignItem hasLoading={isLoading} hasError={isError}>
                 {data &&
                     <>
-                        <h2>{data.sunsign}</h2>
+                        <strong><h2>{data.sunsign}</h2></strong>
                         <p>&emsp;{splittedText}</p>
                         <div>
                             <p>Keywords:&emsp;{data.meta.keywords}</p>
@@ -41,11 +38,9 @@ const SignCard: React.FC<Prop> = ({ onClose }) => {
                         </div>
                     </>
                 }
-
-
             </SignItem>
-        </section>
+        </CardModal>
     );
 }
 
-export default SignCard;
+export default SignDailyCard;

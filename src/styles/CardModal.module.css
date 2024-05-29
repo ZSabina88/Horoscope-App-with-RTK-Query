@@ -1,0 +1,44 @@
+.cardWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #faedd6;
+  border: 3px ridge #b8a794;
+  border-radius: 5px;
+}
+
+.cardWrapper::backdrop {
+  background: hsla(0, 0%, 0%, 0.3);
+}
+
+.buttons {
+  width: 30vw;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.buttons button {
+  width: 70%;
+  height: 50px;
+  border: 1px solid #b8a794;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 24px;
+}
+
+.dailySigns {
+  width: 50vw;
+  min-height: 600px;
+  background-image: url(../assets/bglight.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}/*# sourceMappingURL=CardModal.module.css.map */

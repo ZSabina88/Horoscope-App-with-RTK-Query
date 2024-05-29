@@ -1,4 +1,5 @@
-@import "./variables";
+@use "./variables" as *;
+@use "./mixins" as *;
 
 .item {
     width: 50vw;
@@ -11,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
-    border: 3px ridge #b8a794;
+    border: 3px ridge $border-clr;
     border-radius: 5px;
     position: relative;
 }
@@ -23,10 +24,12 @@
     align-items: center;
     padding: 70px 50px 0 50px;
     overflow: hidden;
-    font-size: 20px;
+    @include font(24px);
+    // font-size: 20px;
 
-    & h2{
-        font-size: 32px;
+    & h2 {
+        @include font(32px);
+        // font-size: 32px;
     }
 
     & p {
@@ -39,13 +42,13 @@
     }
 }
 
-.loading{
-    margin: 150px  auto;
+.loading {
+    margin: 150px auto;
     text-align: center;
 }
 
-.error{
+.error {
     margin: 150px auto;
     text-align: center;
-    color: rgb(175, 3, 3);
+    color: $error-clr;
 }

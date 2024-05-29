@@ -1,0 +1,32 @@
+@mixin flex($direction, $justify-content) {
+    display: flex;
+    flex-direction: $direction;
+    // flex-shrink: 1;
+    justify-content: $justify-content;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  @mixin font( $font-size) {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: $font-size;
+  }
+  
+  @mixin grid($temp-column, $justify-content) {
+    display: grid;
+    grid-template-columns: $temp-column;
+    justify-content: $justify-content;
+  }
+
+  @mixin breakpoint($point) {
+    @if $point == small {
+      @media (max-width: 400px) { @content; }
+    }
+    @else if $point == medium {
+      @media (max-width: 750px) { @content; }
+    }
+    @else if $point == large {
+      @media (max-width: 1280px) { @content; }
+    }
+  }

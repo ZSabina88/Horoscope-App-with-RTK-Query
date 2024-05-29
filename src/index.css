@@ -1,14 +1,16 @@
+
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   /* font-weight: 400; */
 
-  font-family: "Great Vibes", cursive, Arial, sans-serif;
+  font-family: "Great Vibes", cursive,  sans-serif;
   font-weight: 400;
   font-style: normal;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  /* color: rgba(255, 255, 255, 0.87); */
+  color: rgb(43, 41, 41);
   background-color: #faedd6;
 
   font-synthesis: none;
